@@ -39,7 +39,7 @@ const orangeShades = [
 ];
 
 function LineChart(props) {
-  if (!sensoryData) return <div>loading...</div>;
+  if (!props.data) return <div>loading...</div>;
   const [data, setData] = useState(props.data[0]);
   if (!data) return <div>no data found...</div>;
 

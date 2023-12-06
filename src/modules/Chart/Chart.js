@@ -3,13 +3,13 @@ import LineChart from "./components/LineChart";
 import { getFile } from "@/axios/api";
 import { toastError } from "@/utils/toastError";
 
-const Chart = () => {
+const Chart = (props) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await getFile(props.params.file);
+        const res = await getFile(props.id);
         if (res.status === 200) setData(res.data.data);
       } catch (err) {
         console.log(err);
