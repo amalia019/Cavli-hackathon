@@ -1,4 +1,4 @@
-import LineChart from "./components/LineChart";
+import LineChart from "./components/LineChart.js";
 
 const Chart = () => {
   return <LineChart />;
